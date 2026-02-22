@@ -67,72 +67,82 @@ where $\lambda_{\max}$ is the largest eigenvalue of the Cauchy–Green deformati
 python -m venv .venv
 source .venv/bin/activate   # macOS/Linux
 # .venv\Scripts\activate    # Windows
+```
 
+### 2) Install dependencies
 
-2) Install dependencies
+```bash
 pip install -U pip
 pip install numpy scipy matplotlib jupyter
+```
 
-If your notebooks use additional packages (e.g., pandas, seaborn), add them too:
+Optional:
 
+```bash
 pip install pandas seaborn scikit-learn
-▶️ How to Run
+```
+
+---
+
+## ▶️ How to Run
+
+```bash
 jupyter notebook
+```
 
-Open any .ipynb file and run cells top-to-bottom.
+Open any `.ipynb` file and run cells top-to-bottom.
 
-Suggested order:
+### Suggested Order
 
-Start with Red.ipynb, Blue.ipynb, or GreenYellow.ipynb
+1. `Red.ipynb`
+2. `Blue.ipynb`
+3. `GreenYellow.ipynb`
+4. Pulsing variants (e.g., `RedPulsing.ipynb`)
+5. `FTLE.ipynb`
 
-Then try pulsing versions (e.g., RedPulsing.ipynb)
+---
 
-Finally compute FTLE fields in FTLE.ipynb
+## 🧪 Notes
 
-🧪 Notes / Tips
+- Use `*Small.ipynb` notebooks for faster parameter testing.
+- Pulsing notebooks analyze time-dependent perturbations and transport barrier changes.
+- If performance is slow, reduce:
+  - Grid resolution
+  - Integration time window
+  - Number of particles
 
-Use small notebooks (*Small.ipynb) when testing parameters quickly.
+---
 
-Pulsing notebooks are helpful to study time-dependent perturbations and how they change mixing/transport barriers.
+## 🗺️ Results
 
-If a notebook is slow, reduce:
+Outputs include:
 
-grid resolution
-
-integration time window
-
-number of particles
-
-🗺️ Results (What You’ll See)
-
-Outputs generally include:
-
-Particle trajectory plots
-
-Phase-space / spatial deformation behavior
-
-FTLE heatmaps / contours
-
-Comparison of pulsed vs non-pulsed flow structure
+- Particle trajectory plots
+- Phase-space / spatial deformation behavior
+- FTLE heatmaps / contour plots
+- Comparison of pulsed vs non-pulsed flow structure
 
 These visualizations highlight coherent transport barriers and mixing regions.
 
-🧩 Future Work
+---
 
-Add explicit SDE noise models + uncertainty quantification
+## 🧩 Future Work
 
-Extract LCS ridges automatically from FTLE fields
+- Explicit SDE noise models + uncertainty quantification
+- Automatic LCS ridge extraction
+- Parameter sweeps + reproducible experiment configurations
+- Performance optimizations (vectorized integrators / GPU)
 
-Parameter sweeps + reproducible experiment configs
+---
 
-Speedups (vectorized integrators / GPU)
+## 👩‍💻 Author
 
-👩‍💻 Author
+Krishita Vaghani  
+B.S. Computer Science, Minor in Mathematics  
+Applied Math / Dynamical Systems Research  
 
-Krishita Vaghani
-B.S. Computer Science, Minor in Mathematics
-Applied Math / Dynamical Systems Research
+---
 
-📜 License
+## 📜 License
 
 For academic and research use.
