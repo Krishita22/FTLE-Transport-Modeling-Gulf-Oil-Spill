@@ -48,15 +48,15 @@ This repo focuses on:
 
 ## 🧠 Method (High Level)
 
-FTLE is computed from the flow map over a finite time window \(T\).  
+FTLE is computed from the flow map over a finite time window \(T\).
+
 Particles are integrated forward (or backward), the **flow map gradient** is estimated, and the maximum stretching rate is extracted via the **Cauchy–Green deformation tensor**.
 
-\[
+$$
 \text{FTLE} = \frac{1}{|T|} \ln \sqrt{\lambda_{\max}}
-\]
+$$
 
-where \(\lambda_{\max}\) is the largest eigenvalue of the Cauchy–Green tensor.
-
+where $\lambda_{\max}$ is the largest eigenvalue of the Cauchy–Green deformation tensor.
 ---
 
 ## ✅ Setup
